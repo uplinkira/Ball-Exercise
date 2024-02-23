@@ -1,0 +1,41 @@
+#ball
+{
+z-index: 5;
+position: absolute;
+left: 0px;
+top: 200px;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: black;
+}
+
+/* Set the margin for the entire page to 0 to remove default margins */
+/* 设置整个页面的边距为0，以去除默认的外边距*/
+body {
+    margin: 0;
+    overflow: hidden; /* Hide overflow content on the page to prevent scrollbars *//* 隐藏页面的溢出内容，防止页面出现滚动条 */
+}
+
+/* Select an element with id="container" in the page */
+/* 选择页面中的一个具有id="container"的元素 */
+
+#container {
+    width: 100%; /* Set the width of the container to 100% to occupy the entire visible viewport width *//* 设置容器的宽度为100%，占据整个可见视口宽度 */
+    height: 100vh; /* Set the height of the container to 100vh to occupy the entire visible viewport height *//* 设置容器的高度为100vh，占据整个可见视口高度 */
+    position: relative; /* Set the positioning of the container to relative, which may be used for absolute positioning of child elements *//* 设置容器的定位方式为相对定位，后续可能用于子元素的绝对定位 */
+}
+
+/* "vh" is a CSS unit that stands for "viewport height." It represents a percentage of the height of the browser viewport (or container). For example, "100vh" means 100% of the viewport height, while "50vh" means 50% of the viewport height.“vh”是一个 CSS 单位，代表“视口高度”。它表示浏览器视口（或容器）高度的百分比。例如，“100vh”表示视口高度的 100%，而“50vh”表示视口高度的 50%。 */
+
+#ballA {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s;
+}
