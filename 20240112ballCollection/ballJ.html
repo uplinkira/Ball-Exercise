@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ballJ.css">
+  <title>Ball Collection</title>
+</head>
+
+<body>
+  <div id="container">
+      <!-- container is used to hold all the balls -->
+  </div>
+  <div id="controlPanel">
+    <label for="ballCount">How many balls?</label>
+    <input type="number" id="ballCount" min="0" step="1" value="0">
+    <button id="buttonCreate">&#9658;</button>
+    <!-- Add more buttons for additional effects -->
+
+    <!-- &#HTML Entity Encoding + number =represent the Unicode code point of the character, typically in decimal form-->
+
+    <button id="buttonFloat">&#9650;</button>
+    <button id="buttonGravity">&#9660;</button>
+    <button id="buttonAccelerate">➕</button> 
+    <button id="buttonDecelerate">➖</button> 
+    <button id="buttonGenMouse">👆</button>
+    <button id="buttonTrack">📍</button>
+    <button id="buttonRandom">🌀</button>
+    <!-- 引入图标库（如 Font Awesome） -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <button id="buttonStartMotion"><i class="fas fa-play"></i> Start</button>
+    <button id="buttonStopMotion"><i class="fas fa-pause"></i> Pause</button> -->
+  </div>
+
+  <script src="ballCreate.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ballJ.css">
+  <title>Pacmen ♥ Balls</title>
+  <style>
+    /* Basic styles for canvas and control panel */
+    #gameCanvas {
+      border: 1px solid black; /* Just to make the canvas visible */
+      display: block; /* Prevents the page from scrolling horizontally */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+    #controlPanel {
+      text-align: center; /* Center the controls */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas element for rendering balls and PacMan -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Control panel for user interactions -->
+  <div id="controlPanel">
+    <label for="ballCount">How many balls?</label>
+    <input type="number" id="ballCount" min="0" step="1" value="0">
+    <button id="buttonCreate">&#9658;</button>
+    <button id="buttonFloat">&#9650;</button>
+    <button id="buttonGravity">&#9660;</button>
+    <button id="buttonGenMouse">👆</button>
+    <button id="buttonTrack">📍</button>
+    <button id="buttonRandom">🌀</button>
+  </div>
+
+  <!-- JavaScript for handling the logic and animations -->
+  <script src="ballPac.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Basic styling for the body, ensuring no extra margins are present */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+/* Styling for the container */
+#container {
+  position: relative;/* Relative positioning to allow balls to position relative to this container */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;/* Hides parts of the balls that overflow the container */
+  /* cn:隐藏溢出容器的球的部分 */
+}
+
+#createBall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* 保证 createBall 在最顶层 */
+}
+/* position: absolute; 表示 #createBall 元素的位置相对于最近的已定位（即 position 不是 static）的祖先元素进行定位。在这个例子中，#createBall 将相对于 #container 进行定位，因为 #container 被设置成了 position: relative;。 */
+/* position: absolute; means that the position of the #createBall element is positioned relative to the nearest positioned ancestor element (i.e. position not static ). In this example, #createBall will be positioned relative to #container because #container is set to position: relative; */
+
+
+/* Styling for the balls */
+.ball {
+  position: absolute;
+  z-index: 10; /* 确保球体的 z-index 小于 createBall */
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+  /* 其他样式保持不变 */
+}
+
+.pacman {
+  background-size: cover; /* Ensure the image covers the div */
+  border-radius: 50%; /* Maintain the circular shape */
+}
+
+
+
+/* #+id = id selector */
+/* .+class = class selector */
+
+* {
+  font-family: "opposans", sans-serif;
+}
+
+
+label[for="ballCount"] {
+  font-family: "opposans", sans-serif;
+}
+
+
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for the control panel */
+#controlPanel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100; /* Ensures the control panel is above the balls */
+}
+
+/* Styling for labels and input fields in the control panel */
+#controlPanel label, #controlPanel input {
+  margin-right: 10px;
+}
+
+/* Styling for buttons in the control panel */
+#controlPanel button {
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+  border: 2px dashed rgba(89, 89, 89, 0.9);
+}
+
+#controlPanel button:hover {
+  background-color: #ffae00;
+}
+
+/* 可以添加特定的样式来覆盖任何默认样式 */
+#buttonAccelerate, #buttonDecelerate {
+  font-weight: bold;
+}
